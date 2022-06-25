@@ -87,17 +87,6 @@ $('nav .nav-info-2 .fa').click(function (e) {
         })
     }
 });
-// searchInput.forEach(function (ele) {
-//     ele.addEventListener('input', function (e) {
-//         searchList = []
-//         for (let i = 0; i < result.length; i++) { 
-//             if (result[i].title.toLowerCase().includes(e.target.value.toLowerCase())) {
-//                 searchList.push(result[i]) 
-//             }
-//         }
-//         displayData(searchList)
-//     })
-// })
 searchInput2.addEventListener('input', function () {
     searchList = []
     for (let i = 0; i < result.length; i++) { 
@@ -129,7 +118,7 @@ async function callBack() {
 };
 callBack();
 $('nav .nav-info-1 ul .contact').click(function () {
-    let offsetContact = $('#contactUs').offset().top
+    const offsetContact = $('#contactUs').offset().top
     $('html,body').animate({scrollTop:`${offsetContact}px`},500)
 })
                             // REGEX
@@ -174,9 +163,9 @@ ageInput.addEventListener('input', function () {
     }
 });
 passwordInput.addEventListener('input', function () {
-    const regexPassword = /^[a-z].{7}/i;
+    const regexPassword = /[a-z](\d){1}/ig
     const wPassword =$('#w-password')
-    if (regexPassword.test(passwordInput.value)) {
+    if (regexPassword.test(passwordInput.value) && passwordInput.value.length >= 8 ) {
         wPassword.addClass("d-none")
     }else
     {
