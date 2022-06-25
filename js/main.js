@@ -36,7 +36,7 @@ function displayData(arrayList) {
     let cartona = ``;
     for (let i = 0; i < arrayList.length; i++) {
         cartona += `
-                    <div class=" col-md-4">
+                    <div class=" col-xl-4 col-lg-6">
                         <div class="cards rounded-3">
                             <div class="image-card">
                                 <img class="w-100" src="https://image.tmdb.org/t/p/original${arrayList[i].poster_path}" alt="">

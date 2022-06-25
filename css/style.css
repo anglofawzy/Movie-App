@@ -98,6 +98,7 @@ ul li
 .cards .info-card
 {
     padding: 10px;
+    overflow: hidden;
 }
 .cards .caption-card
 {
@@ -109,6 +110,7 @@ ul li
     top: 100%;
     height: 100%;
     transition: top 1s;
+    overflow: hidden;
 }
 .cards:hover .caption-card
 {
